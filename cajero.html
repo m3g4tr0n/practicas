@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <select name="" id="" ng-model="lista.productoSeleccionado">
+        <option ng-repeat="producto in lista.productos" value="{{producto.id}}" > {{producto.nombre}}</option>
+    </select>
+
+    <input type="text" ng-model="lista.cantidad">
+    <input type="button" value="Añadir" ng-click="lista.addAlCarrito()">
+     
+    <table id="cavesa" >
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tr ng-repeat="producto in lista.carrito">
+            <td>{{producto.nombre}}</td>
+            <td>${{producto.precio}}</td>
+            <td>{{producto.cantidad}}</td>
+            <td>${{producto.total}}</td>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th>TOTAL GENERAL ==></th>
+            <th>{{lista.getTotalCarrito()}}</th>
+        </tr>
+    </table>   
+</body>
+</html>
