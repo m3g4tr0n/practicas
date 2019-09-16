@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="angular.min.js"></script>
+    <script src="angular-route.min.js"></script>
+    <script src="app.js"></script>
+
+</head>
+
+<body ng-controller="MyCtrl as lista">
+    
+    <div>
+        <ul>
+            <li><a href="#!">CAJERO</a></li>
+            <li><a href="#!productos">PRODUCTOS</a></li>
+        </ul>
+    </div>
+
+<div ng-view></div>
+</body>
+</html>
