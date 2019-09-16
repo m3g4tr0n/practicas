@@ -21,6 +21,7 @@ app.controller("MyCtrl", function($scope){
         {id: 2, nombre: "Café", precio: 10.00}
     ];
 
+    
     lista.carrito = [];
 
     lista.addProducto = function(){
